@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    <style>
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/variable/pretendardvariable.css");
+      
+      * {
+          box-sizing: border-box;
+          border: none;
+      }
+  
+      body {
+          width: 1920px;
+          
+          background-color: rgb(255, 255, 255); 
+          margin: 0 ;
+      }
+  
+    
+  
+      .navibar {
+          position: fixed;
+          float: top;
+          top: 0;
+          width: 100%;
+          height: 125px;
+          background-color: black;
+      }
+  
+  
+      .navibar #logo img{
+          margin-top: 30px;
+          margin-right: 76px;
+          margin-left: 255px;
+          margin-bottom: 37px;
+          width: 233px;
+          height: 64px;
+  
+      }
+  
+      .navibar #menu{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          margin-top: 53px;
+          display: inline-block;
+          position:absolute;
+          
+  
+  }
+  
+      .navibar #menu li{
+          float: left;
+
+          line-height: 24px;
+          padding-right: 65px;
+  }
+  
+      .navibar #menu li a{
+          font-size: 24px;
+          font-family: 'Pretendard Variable';
+          font-weight: 700;
+          color:#ffffff;
+          text-decoration: none;
+          
+  
+  }
+  
+      .navibar #icon {
+          padding: 0;
+          margin: 0;
+          float: right;
+          margin-top: 45px;
+          margin-right: 269px;
+  
+      }
+  
+      .navibar #icon li{
+          padding-left: 30px;
+          float: right;
+          text-decoration: none;
+          list-style: none;
+          
+      }
+  
+      .navibar #icon li img{
+          width: 34px;
+          height: 34px;
+  
+      }
+
+      .product{
+        float:left;
+        left:0;
+        top: 0;
+        margin-top: 343px;
+        margin-left: 304px;
+      }
+
+      .product img{
+        width: 671px;
+        height: 832px;
+      }
+
+      .arrow-prev, .arrow-next{
+        float: left;
+        position: relative;
+      }
+      .arrow-prev::after {
+        position: absolute;
+        right: 0px; 
+        top: 410px; 
+        content: '';
+        width: 33px; /* 사이즈 */
+        height: 33px; /* 사이즈 */
+        border-top: 4px solid #7B7B7B; /* 선 두께 */
+        border-right: 4px solid #7B7B7B; /* 선 두께 */
+        transform: rotate(225deg); /* 각도 */
+      }
+      .arrow-next::after {
+        position: absolute;
+        left: 670px; 
+        top: 394px; 
+        content: '';
+        width: 33px; /* 사이즈 */
+        height: 33px; /* 사이즈 */
+        border-top: 4px solid #7B7B7B; /* 선 두께 */
+        border-right: 4px solid #7B7B7B; /* 선 두께 */
+        transform: rotate(45deg); /* 각도 */
+    }
+
+    #shape-container{
+        float:left;
+        left:0;
+
+        margin-left: -440px;
+        margin-top: 1200px;
+            
+
+        }
+
+    #shape1{
+        width: 17px;
+        height: 17px;
+        margin-right: 27px;
+        display: inline-block;
+        background-color: #1E1E48;
+        border-radius: 20px;
+        }
+        
+    .shape{
+        margin-right: 24px;
+            
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        display: inline-block;
+
+        background-color: #E9E9E9;
+        }   
+    
+    .product-info{
+        position: fixed;
+        float: right;
+        display: block;
+        top: 0;
+        right:0;
+        margin-top: 220px;
+        margin-right: 300px;
+    }
+
+    .product-info h1{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 26px;
+    }
+
+    .product-info h2{
+        font-weight: 600;
+        font-family: 'Pretendard Variable' ;
+        font-size: 24px;
+
+        margin-top: 22px;
+        margin-bottom: -30px;
+
+    }
+
+    #share-button{
+        margin-left: 410px;
+        }
+    #share-button img{
+        width: 20px;
+        height: 24px;
+    }
+
+    #heart-button{
+       margin-left: 20px;
+       
+    }
+    #heart-button img{
+        width: 24px;
+        height: 22px;
+    }
+
+    .product-info h3{
+        margin-left: 5px;
+        margin-top: 10px;
+        top: 0;
+        right:0;
+        display: inline-block;
+        text-align: right;
+        font-weight: 600;
+        font-family: 'Pretendard Variable' ;
+        font-size: 14px;
+
+    }
+
+    .line{
+        border-top: 2px solid #BCBCBC;
+        margin-top: 10px;
+    }
+
+    .color{
+        float:left;
+        margin: 0;
+        margin-bottom: -15px;
+    }
+
+    .color h4{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 18px;
+        color: #000000;
+
+        margin-top: 18px;
+        margin-bottom: 8px;
+    }
+
+    .color-1{
+        width: 90px;
+        height: 34px;
+        background-color: #ECE9C1;
+
+        margin-right: 15px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    .color-2{
+        width: 90px;
+        height: 34px;
+        background-color: #C9DDE1;
+        border-radius: 5px;
+
+        display: inline-block; 
+    }
+
+    .size{
+        margin: 0;
+        margin-bottom: -1px;
+        
+    }
+
+    .size h4{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 18px;
+        color: #000000;
+        
+        margin-bottom: 13px;
+
+    }
+
+    .size-type{
+        margin-right: 15px;
+        text-decoration: none;
+
+        padding: 9px 34px 9px 34px;
+        border: 2px solid #DEDEDE; 
+        border-radius: 5px;
+        background-color: white;
+
+        font-weight: 700;
+        font-family: 'roboto' ;
+        font-size: 18px;
+        color: #3D3D3D;
+    }
+    
+    .amount{
+        margin: 0;
+        display: inline-block;
+        
+    }
+
+    .amount h4{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 18px;
+        color: #000000;
+        
+        margin-bottom: 13px;
+    }
+    .minus{
+        margin-right: 0px;
+        text-decoration: none;
+
+        padding: 8px 16px 8px 16px;
+        border: 2px solid #DEDEDE; 
+        border-radius: 5px 0px 0px 5px;
+        background-color: white;
+
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 20px;
+        color: #3D3D3D;
+
+    }
+    .amount-1{
+        margin-left: -8px;
+        margin-right: 0px;
+        text-decoration: none;
+
+        padding: 8px 16px 8px 16px;
+        border: 2px solid #DEDEDE; 
+        border-radius: 0px 0px 0px 0px;
+        background-color: white;
+
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 20px;
+        color: #3D3D3D;
+
+    }
+    .plus{
+        margin-left: -8px;
+        margin-right: 0px;
+        text-decoration: none;
+
+        padding: 8px 16px 8px 16px;
+        border: 2px solid #DEDEDE; 
+        border-radius: 0px 5px 5px 0px;
+        background-color: white;
+
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 20px;
+        color: #3D3D3D;
+
+    }
+
+    .notice{
+        margin:0;
+        display: inline-block;
+        
+    }
+
+    .notice h4{
+        font-weight: 400;
+        font-family: 'Pretendard Variable' ;
+        font-size: 14px;
+        color: #000000;
+        display: inline-block;
+
+        margin-left:20px;
+        
+    }
+
+    .price{
+        margin:0;
+        margin-top: 10px;
+    }
+    .price h4{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 18px;
+        color: #000000;
+       
+        margin-top:5px;
+        margin-bottom: 5px;
+    }
+    .panmae{
+        font-weight: 500;
+        font-family: 'Pretendard Variable' ;
+        font-size: 16px;
+        color: #3D3D3D;
+        display: inline-block;
+       
+        margin-right: 10px;
+        
+    }
+    .panmae-price{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 16px;
+        color: #3D3D3D;
+
+        display: inline-block;
+    }
+
+    .member-frame{
+        margin:0;
+        margin-top:5px;
+    }
+    .member{
+        font-weight: 500;
+        font-family: 'Pretendard Variable' ;
+        font-size: 16px;
+        color: #3D3D3D;
+        display: inline-block;
+        
+       
+        margin-right: 10px;
+        
+    }
+    .member-price{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 16px;
+        color: #3D3D3D;
+
+        display: inline-block;
+       
+        
+
+    }
+
+    .coin-frame{
+        margin:0;
+        margin-top:5px;
+    }
+    .coin{
+        font-weight: 500;
+        font-family: 'Pretendard Variable' ;
+        font-size: 16px;
+        color: #3D3D3D;
+        display: inline-block;
+        
+       
+        margin-right: 10px;
+        
+    }
+    .coin-price{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 16px;
+        color: #3D3D3D;
+
+        display: inline-block;
+       
+        
+
+    }
+
+    .tab{
+        margin:0;
+        float:left;
+    }
+    .low-price-tab{
+        width:260px;
+        text-align: left;
+        display: inline-block;
+
+        margin-top: 50px;
+        margin-bottom: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        text-decoration: none;
+
+        padding: 15px 40px 15px 40px;
+        
+        border-radius: 10px;
+        background-color: #E9E9E9;
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 20px;
+        color: #3D3D3D;
+    }
+    .guemae{
+        width:260px;
+        text-align: left;
+        display: inline-block;
+
+        margin-top: 50px;
+        margin-bottom: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        text-decoration: none;
+
+        padding: 15px 40px 15px 40px;
+        
+        border-radius: 10px;
+        background-color: #000000;
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+
+
+    
+    
+        
+
+
+
+
+    .product-info-long{
+        float:left;
+        left:0;
+        top: 0;
+        margin-top: 1500px;
+        margin-left: -670px;
+
+    }
+    
+    .product-info-tab{
+        margin-left: -8px;
+        margin-right: 0px;
+        text-decoration: none;
+
+        padding: 26px 68px 26px 68px;
+        border-top: 2px solid #000000;
+        border-bottom: 2px solid #000000; 
+        
+        background-color: white;
+
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 24px;
+        color: #000000;
+
+    }
+    .review-info-tab{
+        margin-left: -15px;
+        margin-right: 0px;
+        text-decoration: none;
+
+        padding: 26px 68px 26px 68px;
+        border-top: 2px solid #000000;
+        border-bottom: 2px solid #CBCBCB; 
+        
+        background-color: white;
+
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 24px;
+        color: #CBCBCB;
+
+    }
+    .QandA-info-tab{
+        margin-left: -15px;
+        margin-right: 0px;
+        text-decoration: none;
+
+        padding: 26px 68px 26px 68px;
+        border-top: 2px solid #000000;
+        border-bottom: 2px solid #CBCBCB; 
+        
+        background-color: white;
+
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 24px;
+        color: #CBCBCB;
+
+    }
+
+    .image-1 img{
+        margin-top: 200px;
+        margin-left: -10px;
+        width: 685px;
+        height:1080px;
+    }
+    .image-2 img,.image-3 img,.image-4 img,.image-5 img{
+        margin-top: 1px;
+        margin-left: -10px;
+        width: 685px;
+        height:1080px;
+    }
+    .image-6 img{
+       
+        width: 685px;
+        height:400px;
+    }
+
+    .image-6-info{
+        margin-top: 80px;
+        margin-bottom: 80px;
+        text-align: center;
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 18px;
+        color: #000000;
+
+    }
+    .image-7 img{
+       width: 685px;
+       height:762px;
+   }
+   .image-8 img{
+       width: 685px;
+       height: 880px;
+   }
+
+   .product-info-button{
+        width: 180px;
+
+        margin-top: 100px;
+        margin-bottom: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        text-decoration: none;
+
+        padding: 15px 30px 15px 40px;
+        
+        border-radius: 10px;
+        background-color: rgb(0, 0, 0);
+
+
+   }
+
+   .p-i-b{
+        font-weight: 700;
+        font-family: 'Pretendard Variable' ;
+        font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+        text-align: center;
+
+   }
+
+   
+    
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/variable/pretendardvariable.css" />
+    
+    <div class="navibar">
+        <a href="#" id="logo">
+            <img src="https://i.postimg.cc/8zQnXPVS/1-2.png" height="200">
+        </a>
+    
+        <ul id="menu">
+            <li><a href="#">상품</a></li>
+            <li><a href="#">브랜드</a></li>
+            <li><a href="#">스냅</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">세일</a></li>
+            <li><a href="#">매거진</a></li>
+        </ul>
+
+        <ul id="icon">
+            <li><a href="#">
+                <a><img src="https://i.postimg.cc/7ZPDtV4D/Group-29.png" height="36"></a>
+            </li>
+            <li><a href="#">
+                <a><img src="https://i.postimg.cc/Bvk06fKQ/Group-30.png" height="36"></a>
+            </li>
+            <li><a href="#">
+                <a><img src="https://i.postimg.cc/TwbX5NVj/Group-31.png" height="36"></a>
+           </li>
+           <li><a href="#">
+            <a><img src="https://i.postimg.cc/cCNGR7hp/Group-44.png" height="36"></a>
+       </li>
+            
+            
+        </ul>
+    </div>
+
+
+    <div class="product">
+        <img src="https://i.postimg.cc/5yYxCzDz/image-50.png">
+        <a href="#" class="arrow-prev"></a>
+        <a href="#" class="arrow-next"></a>
+    </div>
+
+    <div id="shape-container">
+        <a href="#" id="shape1"></a>
+        <a href="#" class="shape"></a>
+        <a href="#" class="shape"></a>
+        <a href="#" class="shape"></a>
+        <a href="#" class="shape"></a>
+    </div>
+
+    <div class="product-info">
+        <h1>블루 IRO LOGO 다잉 반팔 티셔츠<br>(IQTAM23707YEX)</h1>
+        <h2>219,000원</h2>
+        <a href="#" id="share-button">
+            <img src="https://i.postimg.cc/DysBbw7R/Group-55.png">
+        </a>
+        <a href="#" id="heart-button">
+            <img src="https://i.postimg.cc/9FvBBRmc/Group-56.png">
+        </a>
+        <h3>(65)</h3>
+
+        <div class="line"></div>
+
+        <div class="color">
+            <h4>색상</h4>
+            <div class="color-1"></div>
+            <div class="color-2"></div>
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <div class="size">
+            <h4>사이즈</h4>
+            <a href="#" class="size-type">XS</a>
+            <a href="#" class="size-type">S</a>
+            <a href="#" class="size-type">M</a>
+            <a href="#" class="size-type">L</a>
+            <a href="#" class="size-type">XL</a>
+        </div>
+
+        <div class="amount">
+            <h4>수량</h4>
+            <a href="#" class="minus">-</a>
+            <a href="#" class="amount-1">1</a>
+            <a href="#" class="plus">+</a>
+        </div>
+
+        <div class="notice">
+            <h4>(*현재 아이보리 컬러는 한정수량으로 판매 중입니다.)</h4>
+        
+        </div>
+
+        <div class="price">
+            <h4>가격</h4>
+            <div class="panmae">무신사 판매가</div>
+            <div class="panmae-price">219,000원</div>
+            <div class="member-frame">
+            <div class="member">무신사 회원가</div>
+            <div class="member-price">201,261 ~ 219,000원</div></div>
+            <div class="coin-frame">
+                <div class="coin">무신사 회원가</div>
+                <div class="coin-price">201,261 ~ 219,000원</div></div>
+
+        </div>
+
+        <div class="tab">
+            <div class="low-price-tab">
+                장바구니
+            </div>
+            <div class="guemae"> 바로 구매</div>
+           
+
+         
+        </div>
+    </div>
+    
+    <div class="product-info-long">
+        <a href="#" class="product-info-tab">상품 정보</a>
+        <a href="#" class="review-info-tab">리뷰(456)</a>
+        <a href="#" class="QandA-info-tab">Q&A(23)</a>
+        
+        <div class="image-1"> <img src="https://i.postimg.cc/6QXrSLV6/image-56.png"></div>
+        <div class="image-2"><img src="https://i.postimg.cc/vTcf9Pyh/image-58.png" ></div>
+        <div class="image-3"><img src="https://i.postimg.cc/yxt9TFYH/image-59.png" ></div>
+        <div class="image-4"> <img src="https://i.postimg.cc/tCnF4m2C/image-60.png" ></div>
+        <div class="image-5"><img src="https://i.postimg.cc/05BpxqGB/image-61.png" ></div>
+        <div class="image-6-info">좌측 가슴판과 등판의 빈티지한 로고 프린팅이 돋보이는반팔<br> 티셔츠입니다.부드러운 면 소재를 사용하여 쾌적함을 전해줍<br>니다.라운드 넥 디자인에 여유있는 핏 라인으로 편안합니다.<br>넥 라인에 립 조직을 적용하여 밀착감을 높였습니다.밑단 양<br> 사이드에 슬릿으로 활동성을 더해줍니다.다양한 아이템과 캐<br>주얼 코디가 용이한 디자인입니다.<br>
+            <br><br><br>
+            SIZE<br>
+            S: 총길이:71 가슴단면:61 어깨너비:49 팔길이:23.5 소매<br>단면:25 소매단너비:18.5<br>
+            M: 총길이:72.5 가슴단면:63 어깨너비:51 팔길이:24.5 소<br>매단면:26 소매단너비:19<br>
+            L: 총길이:74 가슴단면:65 어깨너비:53 팔길이:25.5 소매<br>단면:27 소매단너비:19.5<br>
+            XL: 총길이:75.5 가슴단면:67 어깨너비:55 팔길이:26.5 소<br>매단면:28 소매단너비:21<br>
+            * 소재:겉감: 면 100% (심지,보강재,상표,무늬,레이스,밴드 <br>등 제외)<br>
+            * 색상:YELLOW<br>
+            * 판매원: 코오롱인더스트리㈜FnC부문<br>
+            * 원산지: 대한민국<br>
+            | 소재정보: 겉감: 면 100% (심지,보강재,상표,무늬,레이스,<br>밴드 등 제외)<br>
+        </div>
+        
+        <div class="image-6"><img src="https://i.postimg.cc/qRB8BJZ9/image-57.png"></div>
+        <div class="image-7"><img src="https://i.postimg.cc/gjqY4hW7/image-63.png"></div>
+        <div class="image-8"><img src="https://i.postimg.cc/zXz58V5J/image-64.png"></div>
+        
+        <div class="product-info-button">
+            <a href="#" class="p-i-b">상품정보 접기</a>
+        </div>   
+    </div>
+
+    <div class="footer">
+        <img src="https://i.postimg.cc/9XBp8m16/Group-43.png" width="100%">
+    </div>
+        
+
+</body>
+</html>

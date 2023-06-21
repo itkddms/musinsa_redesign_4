@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
+
+    <style>
+         @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/variable/pretendardvariable.css");
+      
+        * {
+            box-sizing: border-box;
+            border: none;
+        }
+
+        body {
+            width: 1920px;
+            background-color: rgb(255, 255, 255); 
+            margin: 0 ;
+        }
+
+        .navibar {
+            height: 90px;
+        }
+    
+
+        .navibar #logo img{
+            margin-top: 47px;
+            margin-right: 76px;
+            margin-left: 255px;
+            margin-bottom: 37px;
+            width: 233px;
+            height: 39px;
+
+        }
+
+        .navibar #menu{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 58px;
+            display: inline-block;
+            position:absolute;
+            
+
+    }
+
+        .navibar #menu li{
+            float: left;
+            
+            line-height: 24px;
+            padding-right: 65px;
+    }
+
+        .navibar #menu li a{
+            font-size: 24px;
+            font-family: 'Pretendard Variable';
+            font-weight: 700;
+            color:#000000;
+            text-decoration: none;
+            
+
+    }
+
+        .navibar #icon {
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-top: 45px;
+            margin-right: 269px;
+
+        }
+
+        .navibar #icon li{
+            float: right;
+            text-decoration: none;
+            list-style: none;
+            
+        }
+
+        .navibar #icon li img{
+            width: 58px;
+            height: 58px;
+
+        }
+
+        .header{
+            height: 900px;
+            margin-top: 37px;
+            background-image: url("https://i.postimg.cc/0Q1HNrkr/image.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;  
+           
+           
+        }
+
+        .headline{
+            display: inline-block;
+            margin-top: 310px;
+            margin-left: 250px;
+            text-align: left;
+            
+        }
+
+        .headline h1{
+            margin-bottom: -30px;
+            font-size: 28px;
+            font-weight: 400;
+            font-family: 'Pretendard Variable';
+            color:#47478D;
+           
+
+        }
+        
+        .headline h2{
+            margin-bottom: -10px;
+            font-size: 50px;
+            font-weight: 800;
+            color: #47478D;
+            font-family: 'Pretendard Variable';
+            
+        }
+       
+        .headline h3{
+            font-size: 24px;
+            font-weight: 700;
+            color: #47478D;
+            font-family: 'Pretendard Variable';
+        }
+
+        .button {
+            width: 140px;
+            line-height: 46px;
+            background-color: #47478D;
+            border-radius: 10px;
+            
+            
+            margin-top: 60px;
+            margin-left: 520px;
+            padding-right:34px;
+            padding-left: 37px;
+        }
+
+        .button a{
+            color: white;
+            text-decoration: none;
+            
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'Pretendard Variable';
+
+        }
+
+        #shape-container{
+            display: flex;
+            margin-left: 870px;
+            margin-top: 170px;
+            
+
+        }
+
+        #shape1{
+            width: 37px;
+            height: 18px;
+            margin-right: 27px;
+            display: inline-block;
+            background-color: #1E1E48;
+            border-radius: 20px;
+        }
+        
+        .shape{
+            margin-right: 24px;
+            
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+
+            background-color: #ffffff;
+        }
+
+
+
+        .content1{
+            height: 50px;
+            text-align: center;
+            
+        }
+
+        .content1 h1{
+            margin-top: 76px;
+            margin-bottom: 55px;
+            font-family: 'Pretendard Variable';
+            font-size: 45px;
+            font-weight: 800;
+            color: #000000;
+            
+
+        }
+
+        #content1-menu li{
+            display: inline-block;
+            padding-right:50px;
+           
+         }
+
+   
+
+         #content1-menu li:first-child a{
+            text-decoration: none;
+            border-bottom: 5px solid #000000;
+            padding-bottom: 8px;
+
+
+            display: inline;
+            
+            font-family: 'Pretendard Variable';
+            font-size: 30px;
+            font-weight: 800;
+            color: #000000;
+            
+         }
+
+         #content1-menu li:not(:first-child) a{
+            text-decoration: none;
+            display: inline;
+            
+            font-family: 'Pretendard Variable';
+            font-size: 30px;
+            font-weight: 700;
+            color: #c7c7c7;
+            
+         }
+        
+        
+
+        
+        .content1-list{
+             width: 1410px;
+             margin-right: auto;
+             margin-left: auto;
+        }
+
+       .rank{
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+            
+
+            margin-top: 88px;
+            margin-right: 30px; 
+        }
+
+        .rank-last{
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+            
+
+            margin-top: 88px;
+            margin-right: 0px;
+            
+        }
+
+        .number{
+            
+            text-align: left;
+            margin-bottom: 16px;
+            color:#000000;
+            font-family: 'Pretendard Variable';
+            font-size: 28px;
+            font-weight: 800;
+
+        }
+
+        .triangle{
+            top: 50%;
+            left: -14px;
+            transform: translateY(-50%);
+            position: absolute;
+           
+            width: 0px;
+            height: 0px;
+            border-left: 14x solid transparent;
+            border-right: 14px solid transparent;
+            border-bottom: 20px solid red;
+        }
+
+        .red{
+            position: absolute;
+           
+        }
+
+        
+
+        .rank img{
+            width: 330px;
+            height: 421px;
+        }
+        
+        .rank-last img{
+            width: 330px;
+            height: 421px;
+
+        }
+
+
+        .product-name{
+            margin-top: 25px;
+            margin-bottom: 12px;
+            text-align: center;
+            
+            color:#000000;
+            font-family: 'Pretendard Variable';
+            font-size: 24px;
+            font-weight: 700;
+            
+
+        }
+        .product-name2{
+            margin-bottom: 14px;
+            text-align: center;
+            
+            color:#000000;
+            font-family: 'Pretendard Variable';
+            font-size: 16px;
+            font-weight: 700;
+            
+
+        }
+
+        .product-price{
+            color:#C7C7C7;
+            font-family: 'Pretendard Variable';
+            font-size: 21px;
+            font-weight: 700;
+
+            text-decoration: line-through;
+            margin-right: 17px;
+        }
+
+
+        .product-sale-price{
+            color:#000000;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 21px;
+            font-weight: 700;
+
+        }
+
+        .content2{
+           float: left;
+           margin-left:255px;
+            margin-top:182px;
+        }
+
+        .content2-1{
+           float: left;
+           
+           text-align: center;
+           margin-top:182px;
+        }
+
+
+        .content2 img, .content2-1 img{
+            width:705px;
+            height:268px;
+        }
+
+
+        .content3-center{
+            text-align: center;
+
+        }
+        .content3{
+            width: 1410px;
+            display: inline-block;
+            height: 50px;
+            
+            
+            
+        }
+
+        .content3 h1{
+            margin-top: 180px;
+            margin-bottom: 55px;
+            font-family: 'Pretendard Variable';
+            font-size: 45px;
+            font-weight: 800;
+            color: #000000;
+            
+
+        }
+
+        #content3-menu li{
+            display: inline-block;
+            padding-right:50px;
+           
+         }
+
+   
+
+         #content3-menu li:first-child a{
+            text-decoration: none;
+            border-bottom: 5px solid #000000;
+            padding-bottom: 8px;
+
+
+            display: inline;
+            
+            font-family: 'Pretendard Variable';
+            font-size: 30px;
+            font-weight: 800;
+            color: #000000;
+            
+         }
+
+         #content3-menu li:not(:first-child) a{
+            text-decoration: none;
+            display: inline;
+            
+            font-family: 'Pretendard Variable';
+            font-size: 30px;
+            font-weight: 700;
+            color: #c7c7c7;
+            
+         }
+
+         .content3-list{
+             width: 1410px;
+             margin-right: auto;
+             margin-left: auto;
+        }
+
+       .magazin{
+            text-align: center;
+            text-decoration: none;
+            float: left;
+            
+
+            margin-top: 64px;
+            margin-right: 26px; 
+        }
+
+        .magazin-last{
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+            
+
+            margin-top: 64px;
+            margin-right: 0px;
+            
+        }
+
+        .magazin img{
+            width: 450px;
+            height: 326px;
+        }
+        
+        .magazin-last img{
+            width: 450px;
+            height: 326px;
+        }
+        .title{
+            margin-top: 25px;
+            margin-bottom: 12px;
+            text-align: center;
+            
+            color:#000000;
+            font-family: 'Pretendard Variable';
+            font-size: 27px;
+            font-weight: 700;
+            
+
+        }
+        .subtitle{
+           
+           
+            margin-bottom: 14px;
+            text-align: center;
+            
+            color:#4B4B4B;
+            font-family: 'Pretendard Variable';
+            font-size: 22px;
+            font-weight: 400;
+        }
+        
+        .plus{
+            
+            width: 112px;
+            line-height: 40px;
+            color: rgb(255, 255, 255);
+            background-color: #000000;
+            border-radius: 20px;
+          
+            margin-top: 615px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right:30px;
+            padding-left: 30px;
+           
+
+          
+            
+        }
+
+        .plus a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 400;
+            font-family: 'Pretendard Variable';
+
+        }
+
+        .footer{
+            margin-top: 110px;
+        }
+  
+
+
+    
+   
+        
+      
+        
+    </style>
+
+
+</head>
+<body>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/variable/pretendardvariable.css" />
+
+    <div class="navibar">
+        <a href="#" id="logo">
+            <img src="https://i.postimg.cc/QxH63v1F/3.png" height="200">
+        </a>
+    
+        <ul id="menu">
+            <li><a href="#">상품</a></li>
+            <li><a href="#">브랜드</a></li>
+            <li><a href="#">스냅</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">세일</a></li>
+            <li><a href="http://127.0.0.1:5500/Final%20assignment/sub1.html#">매거진</a></li>
+        </ul>
+
+        <ul id="icon">
+            <li><a href="#">
+                <a><img src="https://i.postimg.cc/zBMCzxJy/image.png" height="36"></a>
+        </li>
+            <li><a href="#">
+            <a><img src="https://i.postimg.cc/Bnk4CDQx/image.png" height="36"></a>
+        </li>
+            <li><a href="#">
+            <a><img src="https://i.postimg.cc/L5QLDLty/image.png" height="36"></a>
+       </li>
+            <li><a href="#">
+             <a><img src="https://i.postimg.cc/X7nJZwpq/image.png" height="36"></a>
+        </li>
+       
+        </ul>
+    </div>
+
+    <div class="header">
+        <div class="headline">
+        <h1>제이에스티나 사은품 이벤트</h1>
+        <h2>(여자)아이들 포토카드 증정<br>& 썸머 아이템 추천</h2>
+        <h3>#미연 & 민니 포토카드 증정(미공개 컷) #최대 44%할인 + 5%쿠폰</h3>
+    </div>
+        <div class="button"><a href="#">보러가기</a></div>
+        <div id="shape-container">
+        <div id="shape1"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+</div>
+
+        <div class="content1">
+            <h1>실시간 랭킹</h1>
+
+            <ul id="content1-menu">
+                <li ><a href="#" >전체</a></li>
+                <li><a href="#">아우터</a></li>
+                <li><a href="#">상의</a></li>
+                <li><a href="#">바지</a></li>
+                <li><a href="#">신발</a></li>
+                <li><a href="#">모자</a></li>
+            </ul>
+             
+
+            <div class="content1-list"> 
+                <a href="http://127.0.0.1:5500/Final%20assignment/sub2.html" class="rank">
+                    <div class="number">1위 -</div>
+                    <img src="https://i.postimg.cc/5yYxCzDz/image-50.png" >
+                    <div class="product-name">이로</div>
+                    <div class="product-name2">블루 IRO LOGO 다잉 ...</div>
+                    <div class="product-sale-price">219,000원</div>
+                </a>
+        
+                <a href="#" class="rank">
+                    <div class="number">2위</div>
+                    <div class="triangle"></div>
+                    <div class="red">2</div>
+                    <img src="https://i.postimg.cc/4NpY2CF9/image-51.png" >
+                    <div class="product-name">메종미네드</div>
+                    <div class="product-name2">23SS MINED HALF ...</div>
+                    <span class="product-price">128,000원</span>
+                    <span class="product-sale-price">76,800원</span>
+                </a>
+        
+                <a href="#" class="rank">
+                    <div class="number">3위</div>
+                    <img src="https://i.postimg.cc/sft7x4h3/image-54.png" >
+                    <div class="product-name">굿라이프웍스</div>
+                    <div class="product-name2">[여름원단] 와이드 빅포켓 ...</div>
+                    <span class="product-price">62,500원</span>
+                    <span class="product-sale-price">54,800원</span>
+                </a>
+
+                <a href="#" class="rank-last">
+                    <div class="number">4위</div>
+                    <img src="https://i.postimg.cc/s29Z0k6X/image-52.png" >
+                    <div class="product-name">페라가모</div>
+                    <div class="product-name2">남성 시그니처 모카신 ...</div>
+                    <span class="product-price">1,390,000원</span>
+                    <span class="product-sale-price">555,000원</span>
+                </a>
+            </div>
+    </div>
+
+             <div class="content2">
+                <img src="https://i.postimg.cc/Gm3jPVWJ/Group-41.png">
+                </div>
+            <div class="content2-1">
+                <img src="https://i.postimg.cc/DwCPx5FV/Group-42.png">
+        </div>
+        <div class="content3-center">
+            <div class="content3">
+            <h1>무신사 매거진</h1>
+
+            <ul id="content3-menu">
+                <li ><a href="#" >스타일</a></li>
+                <li><a href="#">코디</a></li>
+                <li><a href="#">아이템</a></li>
+                <li><a href="#">리포트</a></li>
+                <li><a href="#">피플</a></li>
+            </ul>
+             
+
+            <div class="content3-list"> 
+                <a href="#" class="magazin">
+                    <img src="https://i.postimg.cc/BQhZSFQJ/image-25.png" >
+                    <div class="title">A BREATH OF SUMMER</div>
+                    <div class="subtitle">산뜻하고 가벼운 발걸음을 선사할 텐션 뮬</div>
+                </a>
+        
+                <a href="#" class="magazin">
+                    <img src="https://i.postimg.cc/0QqPWdZ0/image-27.png" >
+                    <div class="title">페스티벌 아니면 어때? 어디서든 파티 가능!</div>
+                    <div class="subtitle">멋진 홈 웨어와 파티 아이템, 그리고 젊은<br> 우리가 함께라면 어디든 페스티벌이야!</div>
+                </a>
+        
+                <a href="#" class="magazin-last">
+                    <img src="https://i.postimg.cc/rw38WLrb/image-28.png" >
+                    <div class="title">아디다스 가젤, 삼바 그리고 캠퍼스 00s!</div>
+                    <div class="subtitle">스니커즈 트렌드 영역을 이을 캠퍼스 00s의 등장.</div>
+                </a>
+
+                </div>
+                
+            </div>
+            <div class="plus">
+                <a href="#">더보기</a></div>
+
+            
+      
+
+        <div class="footer">
+            <img src="https://i.postimg.cc/9XBp8m16/Group-43.png" width="100%">
+        </div>
+          
+        
+         
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    
+<style>
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/variable/pretendardvariable.css");
+      
+    * {
+        box-sizing: border-box;
+        border: none;
+    }
+
+    body {
+        width: 1920px;
+        background-color: rgb(255, 255, 255); 
+        margin: 0 ;
+    }
+
+  
+
+    .navibar {
+        height: 125px;
+        background-color: black;
+    }
+
+
+    .navibar #logo img{
+        margin-top: 30px;
+        margin-right: 76px;
+        margin-left: 255px;
+        margin-bottom: 37px;
+        width: 233px;
+        height: 64px;
+
+    }
+
+    .navibar #menu{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 53px;
+        display: inline-block;
+        position:absolute;
+        
+
+}
+
+    .navibar #menu li{
+        float: left;
+        
+        line-height: 24px;
+        padding-right: 65px;
+}
+
+    .navibar #menu li a{
+        font-size: 24px;
+        font-family: 'Pretendard Variable';
+        font-weight: 700;
+        color:#ffffff;
+        text-decoration: none;
+        
+
+}
+
+    .navibar #icon {
+        padding: 0;
+        margin: 0;
+        float: right;
+        margin-top: 45px;
+        margin-right: 269px;
+
+    }
+
+    .navibar #icon li{
+        padding-left: 30px;
+        float: right;
+        text-decoration: none;
+        list-style: none;
+        
+    }
+
+    .navibar #icon li img{
+        width: 34px;
+        height: 34px;
+
+    }
+
+    .title{
+        width: 100%;
+        margin-top: 210px;
+        text-align: center;
+
+    }
+    .title h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 55px;
+        font-weight: 900;
+    }
+
+    .subtitle{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .subtitle h2{
+        line-height: 36px;
+        font-family: 'Pretendard Variable';
+        font-size: 28px;
+        color:#888888;
+        font-weight: 400;
+
+    }
+
+    .title #hashtag{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 109px;
+     }
+
+    .title #hashtag li{
+        display: inline-block;
+        line-height: 63px;
+        padding-top: 16px;
+        margin-right: 75px;
+
+        border-radius: 45px;
+        
+}
+
+    #hashtag li:first-child a{
+        padding: 16px 35px 16px 35px;
+        
+        border-radius: 45px;
+        font-size: 26px;
+        font-family: 'Pretendard Variable';
+        font-weight: 500;
+        color:#ffffff;
+        background-color: #000000;
+        text-decoration: none;
+}
+
+    #hashtag li:not(:first-child) a{
+        padding: 16px 35px 16px 35px;
+        
+        border-radius: 45px;
+        border: 3px solid #000000;
+        color:#000000;
+        background-color: #ffffff;
+        text-decoration: none;
+
+        font-size: 26px;
+        font-family: 'Pretendard Variable';
+        font-weight: 500;
+       
+}
+
+    .content{
+        width: 1410px;
+        margin-right: auto;
+        margin-left: auto;
+        }
+
+    .magazin{
+        text-align: center;
+        text-decoration: none;
+        float: left;
+            
+
+        margin-top: 64px;
+        margin-right: 26px; 
+        }
+
+    .magazin-last{
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        float: left;
+            
+
+        margin-top: 64px;
+        margin-right: 0px;
+            
+        }
+
+    .magazin img{
+        width: 450px;
+        height: 326px;
+        }
+        
+    .magazin-last img{
+        width: 450px;
+        height: 326px;
+        }    
+
+    .ct-t{
+        display: flex;
+    }
+    
+    .content-title{
+        margin-top: 21px;
+        margin-bottom: 19px;
+        text-align: left;
+        
+            
+        color:#000000;
+        font-family: 'Pretendard Variable';
+        font-size: 24px;
+        font-weight: 800;
+            
+
+        }
+    .content-subtitle, .content-subtitle-2{
+        margin-bottom: 9px;
+        text-align: left;
+            
+        color:#A3A3A3;
+        font-family: 'Pretendard Variable';
+        font-size: 18px;
+        font-weight: 500;
+        }
+    
+    .trend-b{
+        margin-top: 25px;
+        margin-left: 11px;
+        color: #0852DE;
+        font-family:'roboto';
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .trend-r{
+        margin-top: 25px;
+        margin-left: 11px;
+        color: #F22424;
+        font-family:'roboto';
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .slide-bar{
+        width:100%;
+        text-align: center;
+    }
+    #number{
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 142px;
+        
+    }
+     #number li{
+        display: inline-block;
+    
+        margin-right: 67px;
+    }
+
+   
+     #number li:first-child a{
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 800;
+        color:#000000;
+
+        margin-left:64px;
+    }
+    #number li:not(:first-child) a{
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 800;
+        color:#c7c7c7;
+    }
+
+    #number li:not(:last-child) a{
+        margin-right:0;
+    }
+
+    .arrow-prev, .arrow-next{
+    text-align: center;
+    position: relative;
+}
+
+.arrow-prev::after {
+    position: absolute;
+    right: 490px; 
+    bottom: 8px; 
+    content: '';
+    width: 10px; /* 사이즈 */
+    height: 10px; /* 사이즈 */
+    border-top: 2px solid #000; /* 선 두께 */
+    border-right: 2px solid #000; /* 선 두께 */
+    transform: rotate(225deg); /* 각도 */
+}
+
+.arrow-prev:nth-child(2) {
+    right: 22px;
+    }
+.arrow-prev:nth-child(3) {
+    right: 30px;
+    }
+.arrow-next::after {
+    position: absolute;
+    left: 0px; 
+    bottom: 8px; 
+    content: '';
+    width: 10px; /* 사이즈 */
+    height: 10px; /* 사이즈 */
+    border-top: 2px solid #000; /* 선 두께 */
+    border-right: 2px solid #000; /* 선 두께 */
+    transform: rotate(45deg); /* 각도 */
+}
+
+.arrow-next:nth-child(5) {
+    left: 30px;
+    }
+.arrow-next:nth-child(6) {
+    left: 38px;
+    }
+ 
+.footer{
+    margin-top: 200px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/variable/pretendardvariable.css" />
+    
+    <div class="navibar">
+        <a href="#" id="logo">
+            <img src="https://i.postimg.cc/8zQnXPVS/1-2.png" height="200">
+        </a>
+    
+        <ul id="menu">
+            <li><a href="#">상품</a></li>
+            <li><a href="#">브랜드</a></li>
+            <li><a href="#">스냅</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">세일</a></li>
+            <li><a href="#">매거진</a></li>
+        </ul>
+
+        <ul id="icon">
+            <li><a href="#">
+                <a><img src="https://i.postimg.cc/7ZPDtV4D/Group-29.png" height="36"></a>
+            </li>
+            <li><a href="#">
+                <a><img src="https://i.postimg.cc/Bvk06fKQ/Group-30.png" height="36"></a>
+            </li>
+            <li><a href="#">
+                <a><img src="https://i.postimg.cc/TwbX5NVj/Group-31.png" height="36"></a>
+           </li>
+           <li><a href="#">
+            <a><img src="https://i.postimg.cc/cCNGR7hp/Group-44.png" height="36"></a>
+       </li>
+            
+            
+        </ul>
+    </div>
+
+        <div class="title">
+            <h1>MAGAZINE</h1>
+        <div class="subtitle">
+            <h2>다양한 브랜드의 컬렉션을 집중 소개하며 합리적인 쇼핑에 도움을<br> 줄 유용한 가이드를 담은 콘텐츠를 제공합니다.</h2>
+        </div>
+
+        <ul id="hashtag">
+            <li><a href="#">#전체</a></li>
+            <li><a href="#">#화보</a></li>
+            <li><a href="#">#코디</a></li>
+            <li><a href="#">#쇼핑가이드</a></li>
+            <li><a href="#">#리포트</a></li>
+            <li><a href="#">#브랜드룩북</a></li>
+        </ul>
+    </div>
+
+    <div class="content"> 
+        <a href="#" class="magazin">
+            <img src="https://i.postimg.cc/HknnQLcp/image-33.png" >
+            <div class="ct-t">
+            <div class="content-title">화보ㅣ한여름의 디스커스 에슬레틱!</div>
+            <div class="trend-b">HOT</div>
+            </div>
+            <div class="content-subtitle">15시간 전ㅣ611ㅣ디스커스 에슬레틱</div>
+            <div class="content-subtitle-2">여름을 빛내줄 쿨한 반소매 티셔츠를 소개한다.</div>
+        </a>
+
+        <a href="#" class="magazin">
+            <img src="https://i.postimg.cc/CLPLLVv9/image-36.png" >
+            <div class="content-title">코디ㅣ여름휴가 가기 전 필독! 바캉스 코디</div>
+            <div class="content-subtitle">17시간 전ㅣ231ㅣ마르디 메크르디 레쁘띠 외</div>
+            <div class="content-subtitle-2">여행을 200% 즐길 수 있는 스타일 플랜.</div>
+        </a>
+
+        <a href="#" class="magazin-last">
+            <img src="https://i.postimg.cc/4dgXF4dH/image-37.png" >
+            <div class="content-title">화보ㅣ총상금 500만 원을 건 풋살 한판!</div>
+            <div class="content-subtitle">21시간 전ㅣ538ㅣ푸마</div>
+            <div class="content-subtitle-2">플레이어가 푸마와 함께 특별한 대회를 연다.</div>
+        </a>
+
+        </div>
+
+        <div class="content"> 
+            <a href="#" class="magazin">
+                <img src="https://i.postimg.cc/G2TgVLvC/image-41.png" >
+                <div class="ct-t">
+                <div class="content-title">화보ㅣFAMILY WE LOVE</div>
+                <div class="trend-r">NEW</div>
+                </div>
+                <div class="content-subtitle">23시간 전ㅣ245ㅣ마르디 메크르디 레쁘띠 외</div>
+                <div class="content-subtitle-2">인플루언서 미희와 딸 채이의 사랑스러운 여름 스타일링.</div>
+            </a>
+    
+            <a href="#" class="magazin">
+                <img src="https://i.postimg.cc/L5zC4xyQ/image-42.png" >
+                <div class="content-title">쇼핑가이드ㅣ여름셔츠를 입어봤습니다.</div>
+                <div class="content-subtitle">1일 전ㅣ1,056ㅣ노이어 외</div>
+                <div class="content-subtitle-2">무엇이든 입습니다 세 번째 의뢰는 여름 셔츠!</div>
+            </a>
+    
+            <a href="#" class="magazin-last">
+                <img src="https://i.postimg.cc/4yC2TD1h/image-43.png" >
+                <div class="ct-t">
+                <div class="content-title">화보ㅣ다들 여름휴가 룩 정하셨어요?</div>
+                <div class="trend-b">HOT</div>
+                </div>
+                <div class="content-subtitle">1일 전ㅣ1,205ㅣ아그넨 외</div>
+                <div class="content-subtitle-2">여름휴가를 위한 플레이어의 서머 스윔웨어.</div>
+            </a>
+    
+            </div>
+
+            <div class="content"> 
+                <a href="#" class="magazin">
+                    <img src="https://i.postimg.cc/MK8x0TQV/image-47.png" >
+                    <div class="content-title">쇼핑가이드ㅣ스타일 완성! 인기 선글라스</div>
+                    <div class="content-subtitle">2일 전ㅣ2,225ㅣ리끌로우 외</div>
+                    <div class="content-subtitle-2">어떤 룩에도 힙해지는 인기 선글라스를 만나보자.</div>
+                </a>
+        
+                <a href="#" class="magazin">
+                    <img src="https://i.postimg.cc/Mp6S4FtG/image-48.png" >
+                    <div class="ct-t">
+                    <div class="content-title">리포트ㅣ여름을 위한 4가지 아이템</div>
+                    <span class="trend-r">NEW</span>
+                    </div>
+                    <div class="content-subtitle">3일 전ㅣ2,856ㅣ베럴 외</div>
+                    <div class="content-subtitle-2">Player's GUIDE - EP.03 바다에 갈 때 챙기는 필수품</div>
+                </a>
+        
+                <a href="#" class="magazin-last">
+                    <img src="https://i.postimg.cc/nh3JtGwG/image-49.png" >
+                    <div class="ct-t">
+                    <div class="content-title">쇼핑가이드ㅣ즐거운 월드 디제이 페스티벌!</div>
+                    <span class="trend-b">HOT</span>
+                    </div>
+                    <div class="content-subtitle">3일 전ㅣ3,024ㅣ무신사</div>
+                    <div class="content-subtitle-2">#월디페 #스트릿스냅 #페스티벌룩.</div>
+                </a>
+        
+                </div>
+
+        <div class="slide-bar">
+
+                <ul id="number">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+                
+                <a href="#" class="arrow-prev"></a>
+                <a href="#" class="arrow-prev"></a>
+                <a href="#" class="arrow-prev"></a>
+                
+                <a href="#" class="arrow-next"></a>
+                <a href="#" class="arrow-next"></a>
+                <a href="#" class="arrow-next"></a>
+               
+            </div>
+
+            <div class="footer">
+                <img src="https://i.postimg.cc/9XBp8m16/Group-43.png" width="100%">
+            </div>
+</body>
+</html>
